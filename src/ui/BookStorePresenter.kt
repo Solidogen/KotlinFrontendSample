@@ -16,7 +16,6 @@ class BookStorePresenter : BookStoreContract.Presenter {
         view.showLoader()
         getAsync(API_URL) { response ->
             val books = JSON.parse<Array<Book>>(response)
-                /*TODO remove*/.also { it.forEach { book -> println(book.title) } }
             view.hideLoader()
             view.showBooks(books.toList())
         }
