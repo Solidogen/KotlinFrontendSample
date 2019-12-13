@@ -1,3 +1,5 @@
 fun main(args: Array<String>) {
-    println("Hello world")
+    println(API_URL)
 }
+
+val API_URL = js("getApiUrl()") as String
