@@ -5,8 +5,7 @@ fun main() {
     println("Initializing...")
     val presenter = BookStorePresenter()
     val page = BookStorePage(presenter)
-    presenter.attach(page)
-    presenter.loadBooks()
+    page.show()
 }
 
 val API_URL = js("getApiUrl()") as String
